@@ -33,7 +33,7 @@
           <td>
             <a href="lazy-loaded-lcp-image.html">Lazy-loaded LCP image</a>
           </td>
-          <td>141.0 ms</td>
+          <td>119.1 ms</td>
         </tr>
         <tr>
           <td>
@@ -42,7 +42,7 @@
               >Lazy-loaded LCP image with fetchpriority=high attribute</a
             >
           </td>
-          <td>145.9 ms</td>
+          <td>141.1,</td>
         </tr>
         <tr>
           <td>
@@ -50,7 +50,7 @@
               >LCP image with fetchpriority=high attribute</a
             >
           </td>
-          <td>120.6 ms</td>
+          <td>142.6 ms</td>
         </tr>
         <tr>
           <td>
@@ -72,8 +72,16 @@
       </tbody>
     </table>
 
+    
     <p>
-      The LCP-TTFB metric comes from the benchmark-web-vitals command in the wpp-analysis repo. It 
+      
+    </p>Note that the pages include five small images in the header because <a href="https://docs.google.com/document/d/1bCDuq9H1ih9iNjgzyAL0gpwNFiEP4TZS-YLRp_RuMlc/edit">Chrome Resource Priorities and Scheduling</a> automatically loads the first 5 images larger than 10,000px² with high priority, so making the LCP image the 6th image ensures that we can see the effect of preloading.
+
+
+    
+    ,,142.6,118.5,120.4,118.9
+    <p>
+      The LCP-TTFB metric comes from the benchmark-web-vitals command in the wpp-analysis repo. It reflects the LCP time subtracting the TTFB.
     </p>
     
     <hr>
