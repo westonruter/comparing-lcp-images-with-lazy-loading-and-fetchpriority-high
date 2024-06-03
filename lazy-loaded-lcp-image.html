@@ -5,35 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦬</text></svg>">
 
-    <title>Lazy-loaded LCP image with fetchpriority=high preload link</title>
+    <title>Lazy-loaded LCP image</title>
 
     <link rel="stylesheet" href="/style.css" />
-    
-    <style>
-      @media (orientation: portrait) {
-        img#vertical {
-          display: block;
-        }
-        img#horizontal {
-          display: none;
-        }
-      }
-      @media screen and (orientation: landscape) {
-        img#vertical {
-          display: none;
-        }
-        img#horizontal {
-          display: block;
-        }
-      }
-    </style>
-
-    <link rel="preload" href="https://cdn.glitch.global/6482ece1-578b-4f64-93e8-c1edca8e14d8/bison-vertical.jpg?v=1717451469904" fetchpriority="high" media="screen and (orientation: portrait)">
-    <link rel="preload" href="https://cdn.glitch.global/6482ece1-578b-4f64-93e8-c1edca8e14d8/bison-horizontal.jpg?v=1717451240067" fetchpriority="high" media="screen and (orientation: landscape)">
   </head>
   <body>
     <h1>
-      Lazy-loaded LCP image with fetchpriority=high preload link
+      Lazy-loaded LCP image
     </h1>
     <p>
       Random small emoji kitchen images:<br>
@@ -44,8 +22,7 @@
       <img src="https://cdn.glitch.global/6482ece1-578b-4f64-93e8-c1edca8e14d8/u1f433_u1f917.png?v=1717452107125" width="32" height="32">
     </p>
     <p>
-      Now the LCP image which differs on desktop and mobile:<br>
-      <img id="vertical" src="https://cdn.glitch.global/6482ece1-578b-4f64-93e8-c1edca8e14d8/bison-vertical.jpg?v=1717451469904" alt="🦬" width="1426" height="1761" loading="lazy">
+      Now the LCP image:<br>
       <img id="horizontal" src="https://cdn.glitch.global/6482ece1-578b-4f64-93e8-c1edca8e14d8/bison-horizontal.jpg?v=1717451240067" alt="🦬" width="2700" height="1761" loading="lazy">
     </p>
     

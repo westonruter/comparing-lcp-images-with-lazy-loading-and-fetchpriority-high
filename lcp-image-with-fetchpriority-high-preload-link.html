@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦬</text></svg>">
+
+    <title>LCP image with fetchpriority=high preload link</title>
+
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="preload" href="https://cdn.glitch.global/6482ece1-578b-4f64-93e8-c1edca8e14d8/bison-horizontal.jpg?v=1717451240067" fetchpriority="high">
+  </head>
+  <body>
+    <h1>
+      LCP image with fetchpriority=high preload link
+    </h1>
+    <p>
+      Random small emoji kitchen images:<br>
+      <img src="https://cdn.glitch.global/6482ece1-578b-4f64-93e8-c1edca8e14d8/u1f437_u1f422.png?v=1717452092822" width="32" height="32">
+      <img src="https://cdn.glitch.global/6482ece1-578b-4f64-93e8-c1edca8e14d8/u1f923_u1f428.png?v=1717452096050" width="32" height="32">
+      <img src="https://cdn.glitch.global/6482ece1-578b-4f64-93e8-c1edca8e14d8/u1f33c_u1f981.png?v=1717452099641" width="32" height="32">
+      <img src="https://cdn.glitch.global/6482ece1-578b-4f64-93e8-c1edca8e14d8/u1f410_u1f40c.png?v=1717452103754" width="32" height="32">
+      <img src="https://cdn.glitch.global/6482ece1-578b-4f64-93e8-c1edca8e14d8/u1f433_u1f917.png?v=1717452107125" width="32" height="32">
+    </p>
+    <p>
+      Now the LCP image:<br>
+      <img id="horizontal" src="https://cdn.glitch.global/6482ece1-578b-4f64-93e8-c1edca8e14d8/bison-horizontal.jpg?v=1717451240067" alt="🦬" width="2700" height="1761">
+    </p>
+    
+    <nav><a href="./">Back</a></nav>
+  </body>
+</html>
