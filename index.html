@@ -7,24 +7,38 @@
 
     <title>Hello world!</title>
 
-    <!-- import the webpage's stylesheet -->
     <link rel="stylesheet" href="/style.css" />
+    
+    <style>
+      @media (orientation: portrait) {
+        img#vertical {
+          display: block;
+        }
+        img#horizontal {
+          display: none;
+        }
+      }
+      @media screen and (orientation: landscape) {
+        img#vertical {
+          display: none;
+        }
+        img#horizontal {
+          display: block;
+        }
+      }
+    </style>
 
-    <!-- import the webpage's javascript file -->
-    <script src="/script.js" defer></script>
+    <link rel="preload" href="https://cdn.glitch.global/6482ece1-578b-4f64-93e8-c1edca8e14d8/bison-vertical.jpg?v=1717451469904" fetchpriority="high" media="screen and (orientation: portrait)">
+    <link rel="preload" href="https://cdn.glitch.global/6482ece1-578b-4f64-93e8-c1edca8e14d8/bison-horizontal.jpg?v=1717451240067" fetchpriority="high" media="screen and (orientation: landscape)">
   </head>
   <body>
-    <!-- this is the start of content -->
+    
     <h1>
       Hello World!
     </h1>
     <p>
-      This starter gives you everything you need to start working on a new
-      website, and nothing more. If you're looking for something a little more
-      opinionated, try remixing
-      <a href="https://glitch.com/edit/#!/remix/glitch-hello-website"
-        >~glitch-hello-website</a
-      >.
+      <img id="vertical" src="https://cdn.glitch.global/6482ece1-578b-4f64-93e8-c1edca8e14d8/bison-vertical.jpg?v=1717451469904" alt="🦬" width="1426" height="1761" loading="lazy">
+      <img id="horizontal" src="https://cdn.glitch.global/6482ece1-578b-4f64-93e8-c1edca8e14d8/bison-horizontal.jpg?v=1717451240067" alt="🦬" width="2700" height="1761" loading="lazy">
     </p>
   </body>
 </html>
