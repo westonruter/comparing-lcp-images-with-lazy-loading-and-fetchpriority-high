@@ -3,30 +3,80 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦬</text></svg>">
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦬</text></svg>"
+    />
 
     <title>Comparing LCP images with lazy-loading and fetchpriority=high</title>
 
     <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
-    <h1>
-      Comparing LCP images with lazy-loading and fetchpriority=high
-    </h1>
-    
+    <h1>Comparing LCP images with lazy-loading and fetchpriority=high</h1>
+
+    <p>Compare these:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Test Case</th>
+          <th>LCP-TTFB</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="plain-lcp-image.html">Plain LCP image</a></td>
+          <td>120.2 ms</td>
+        </tr>
+        <tr>
+          <td>
+            <a href="lazy-loaded-lcp-image.html">Lazy-loaded LCP image</a>
+          </td>
+          <td>141.0 ms</td>
+        </tr>
+        <tr>
+          <td>
+            <a
+              href="lazy-loaded-lcp-image-with-fetchpriority-high-attribute.html"
+              >Lazy-loaded LCP image with fetchpriority=high attribute</a
+            >
+          </td>
+          <td>145.9 ms</td>
+        </tr>
+        <tr>
+          <td>
+            <a href="lcp-image-with-fetchpriority-high-attribute.html"
+              >LCP image with fetchpriority=high attribute</a
+            >
+          </td>
+          <td>120.6 ms</td>
+        </tr>
+        <tr>
+          <td>
+            <a href="lcp-image-with-fetchpriority-high-preload-link.html"
+              >LCP image with fetchpriority=high preload link</a
+            >
+          </td>
+          <td>119.8 ms</td>
+        </tr>
+        <tr>
+          <td>
+            <a
+              href="lazy-loaded-lcp-image-with-fetchpriority-high-preload-link.html"
+              >Lazy-loaded LCP image with fetchpriority=high preload link</a
+            >
+          </td>
+          <td>120.2 ms</td>
+        </tr>
+      </tbody>
+    </table>
+
     <p>
-      Compare these:
+      The LCP-TTFB metric comes from the benchmark-web-vitals command in the wpp-analysis repo. It 
     </p>
-    <ul>
-     <li><a href="plain-lcp-image.html">Plain LCP image</a></li><!-- 118.15 -->
-     <li><a href="lazy-loaded-lcp-image.html">Lazy-loaded LCP image</a></li><!-- 150.85 LCP -->
-     <li><a href="lazy-loaded-lcp-image-with-fetchpriority-high-attribute.html">Lazy-loaded LCP image with fetchpriority=high attribute</a></li><!-- 149.85 LCP -->
-     <li><a href="lcp-image-with-fetchpriority-high-attribute.html">LCP image with fetchpriority=high attribute</a></li><!-- 118.05 LCP -->
-     <li><a href="lcp-image-with-fetchpriority-high-preload-link.html">LCP image with fetchpriority=high preload link</a></li><!-- 120.85  LCP -->
-     <li><a href="lazy-loaded-lcp-image-with-fetchpriority-high-preload-link.html">Lazy-loaded LCP image with fetchpriority=high preload link</a></li><!-- 121.05 LCP -->
-     
-    </ul>
     
+    <hr>
     <address><a href="https://weston.ruter.net/">@westonruter</a></address>
   </body>
 </html>
