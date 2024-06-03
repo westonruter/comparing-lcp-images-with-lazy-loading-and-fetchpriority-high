@@ -3,42 +3,27 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="https://glitch.com/favicon.ico" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦬</text></svg>">
 
-    <title>Hello world!</title>
+    <title>Comparing LCP images with lazy-loading and fetchpriority=high</title>
 
     <link rel="stylesheet" href="/style.css" />
-    
-    <style>
-      @media (orientation: portrait) {
-        img#vertical {
-          display: block;
-        }
-        img#horizontal {
-          display: none;
-        }
-      }
-      @media screen and (orientation: landscape) {
-        img#vertical {
-          display: none;
-        }
-        img#horizontal {
-          display: block;
-        }
-      }
-    </style>
-
-    <link rel="preload" href="https://cdn.glitch.global/6482ece1-578b-4f64-93e8-c1edca8e14d8/bison-vertical.jpg?v=1717451469904" fetchpriority="high" media="screen and (orientation: portrait)">
-    <link rel="preload" href="https://cdn.glitch.global/6482ece1-578b-4f64-93e8-c1edca8e14d8/bison-horizontal.jpg?v=1717451240067" fetchpriority="high" media="screen and (orientation: landscape)">
   </head>
   <body>
-    
     <h1>
-      Hello World!
+      Comparing LCP images with lazy-loading and fetchpriority=high
     </h1>
+    
     <p>
-      <img id="vertical" src="https://cdn.glitch.global/6482ece1-578b-4f64-93e8-c1edca8e14d8/bison-vertical.jpg?v=1717451469904" alt="🦬" width="1426" height="1761" loading="lazy">
-      <img id="horizontal" src="https://cdn.glitch.global/6482ece1-578b-4f64-93e8-c1edca8e14d8/bison-horizontal.jpg?v=1717451240067" alt="🦬" width="2700" height="1761" loading="lazy">
+      Compare these:
     </p>
+    <ul>
+     <li><a href="lazy-loaded-lcp-image-with-fetchpriority-high.html">Lazy-loaded LCP image with fetchpriority=high</a> &mdash; This should perform worst.</li>
+     <li><a href="lcp-image-with-fetchpriority-high.html">LCP image with fetchpriority=high</a> &mdash; This should perform best.</li>
+     <li><a href="lazy-loaded-lcp-image-with-fetchpriority-high-preload-link.html">Lazy-loaded LCP image with fetchpriority=high preload link</a> &mdash; This should perform just as good if not better!</li>
+     
+    </ul>
+    
+    <address><a href="https://weston.ruter.net/">@westonruter</a></address>
   </body>
 </html>
