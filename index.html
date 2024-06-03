@@ -18,11 +18,12 @@
       Compare these:
     </p>
     <ul>
-     <li><a href="lazy-loaded-lcp-image.html">Lazy-loaded LCP image</a> &mdash; This should perform absolute worst. (LCP-TTFB: 149.6 ms)</li>
-     <li><a href="lazy-loaded-lcp-image-with-fetchpriority-high-attribute.html">Lazy-loaded LCP image with fetchpriority=high attribute</a> &mdash; This should perform worst. (LCP-TTFB: 149.6 ms)</li>
-     <li><a href="lcp-image-with-fetchpriority-high-attribute.html">LCP image with fetchpriority=high attribute</a> &mdash; This should perform best. (LCP-TTFB: 120.65 ms)</li>
-     <li><a href="lcp-image-with-fetchpriority-high-preload-link.html">LCP image with fetchpriority=high preload link</a> &mdash; This should perform best. (LCP-TTFB: 120.65 ms)</li>
-     <li><a href="lazy-loaded-lcp-image-with-fetchpriority-high-preload-link.html">Lazy-loaded LCP image with fetchpriority=high preload link</a> &mdash; This should perform just as good if not better! (LCP-TTFB: )</li>
+     <li><a href="plain-lcp-image.html">Plain LCP image</a></li><!-- 118.15 -->
+     <li><a href="lazy-loaded-lcp-image.html">Lazy-loaded LCP image</a></li><!-- 150.85 LCP -->
+     <li><a href="lazy-loaded-lcp-image-with-fetchpriority-high-attribute.html">Lazy-loaded LCP image with fetchpriority=high attribute</a></li><!-- 149.85 LCP -->
+     <li><a href="lcp-image-with-fetchpriority-high-attribute.html">LCP image with fetchpriority=high attribute</a></li><!-- 118.05 LCP -->
+     <li><a href="lcp-image-with-fetchpriority-high-preload-link.html">LCP image with fetchpriority=high preload link</a></li><!-- 120.85  LCP -->
+     <li><a href="lazy-loaded-lcp-image-with-fetchpriority-high-preload-link.html">Lazy-loaded LCP image with fetchpriority=high preload link</a></li><!-- 121.05 LCP -->
      
     </ul>
     
