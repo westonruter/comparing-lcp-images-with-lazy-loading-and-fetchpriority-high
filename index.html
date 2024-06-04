@@ -11,6 +11,11 @@
     <title>Comparing LCP images with lazy-loading and fetchpriority=high</title>
 
     <link rel="stylesheet" href="/style.css" />
+    <style>
+      th {
+        text-align: left;
+      }
+    </style>
   </head>
   <body>
     <h1>Comparing LCP images with lazy-loading and fetchpriority=high</h1>
@@ -27,13 +32,13 @@
       <tbody>
         <tr>
           <td><a href="plain-lcp-image.html">Plain LCP image</a></td>
-          <td>120.2 ms</td>
+          <td>121.00 ms</td>
         </tr>
         <tr>
           <td>
             <a href="lazy-loaded-lcp-image.html">Lazy-loaded LCP image</a>
           </td>
-          <td>119.1 ms</td>
+          <td>151.95 ms</td>
         </tr>
         <tr>
           <td>
@@ -42,7 +47,7 @@
               >Lazy-loaded LCP image with fetchpriority=high attribute</a
             >
           </td>
-          <td>141.1,</td>
+          <td>156.60 ms</td>
         </tr>
         <tr>
           <td>
@@ -50,7 +55,7 @@
               >LCP image with fetchpriority=high attribute</a
             >
           </td>
-          <td>142.6 ms</td>
+          <td>122.75 ms</td>
         </tr>
         <tr>
           <td>
@@ -58,7 +63,7 @@
               >LCP image with fetchpriority=high preload link</a
             >
           </td>
-          <td>119.8 ms</td>
+          <td>121.90 ms</td>
         </tr>
         <tr>
           <td>
@@ -67,24 +72,34 @@
               >Lazy-loaded LCP image with fetchpriority=high preload link</a
             >
           </td>
-          <td>120.2 ms</td>
+          <td>124.95 ms</td>
         </tr>
       </tbody>
     </table>
 
-    
     <p>
-      Note that the pages include five small images in the header because <a href="https://docs.google.com/document/d/1bCDuq9H1ih9iNjgzyAL0gpwNFiEP4TZS-YLRp_RuMlc/edit">Chrome Resource Priorities and Scheduling</a> automatically loads the first 5 images larger than 10,000px² with high priority, so making the LCP image the 6th image ensures that we can see the effect of preloading.
+      Note that the pages include five small images in the header because
+      <a
+        href="https://docs.google.com/document/d/1bCDuq9H1ih9iNjgzyAL0gpwNFiEP4TZS-YLRp_RuMlc/edit"
+        >Chrome Resource Priorities and Scheduling</a
+      >
+      automatically loads the first 5 images larger than 10,000px² with high
+      priority, so making the LCP image the 6th image ensures that we can see
+      the effect of preloading.
     </p>
 
-
     <p>
-      The LCP-TTFB metric comes from the benchmark-web-vitals command in the <a href="https://github.com/GoogleChromeLabs/wpp-research">GoogleChromeLabs/wpp-analysis</a> repo. It reflects the LCP time subtracting the TTFB. The value is the median over 25 iterations using the following command:
+      The LCP-TTFB metric comes from the benchmark-web-vitals command in the
+      <a href="https://github.com/GoogleChromeLabs/wpp-research"
+        >GoogleChromeLabs/wpp-analysis</a
+      >
+      repo. It reflects the LCP time subtracting the TTFB. The value is the
+      median over 50 requests using the following command:
     </p>
-    
-    <pre><code>npm run research -- benchmark-web-vitals -n 25 -f urls.txt -o csv -m LCP-TTFB</code></pre>
-    
-    <hr>
+
+    <pre><code>npm run research -- benchmark-web-vitals -n 50 -f urls.txt -o csv -m LCP-TTFB</code></pre>
+
+    <hr />
     <footer>
       <address><a href="https://weston.ruter.net/">@westonruter</a></address>
       <time>2024-06-03</time>
