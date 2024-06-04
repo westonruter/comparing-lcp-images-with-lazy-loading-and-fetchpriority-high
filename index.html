@@ -74,17 +74,20 @@
 
     
     <p>
-      
-    </p>Note that the pages include five small images in the header because <a href="https://docs.google.com/document/d/1bCDuq9H1ih9iNjgzyAL0gpwNFiEP4TZS-YLRp_RuMlc/edit">Chrome Resource Priorities and Scheduling</a> automatically loads the first 5 images larger than 10,000px² with high priority, so making the LCP image the 6th image ensures that we can see the effect of preloading.
+      Note that the pages include five small images in the header because <a href="https://docs.google.com/document/d/1bCDuq9H1ih9iNjgzyAL0gpwNFiEP4TZS-YLRp_RuMlc/edit">Chrome Resource Priorities and Scheduling</a> automatically loads the first 5 images larger than 10,000px² with high priority, so making the LCP image the 6th image ensures that we can see the effect of preloading.
+    </p>
 
 
-    
-    ,,142.6,118.5,120.4,118.9
     <p>
-      The LCP-TTFB metric comes from the benchmark-web-vitals command in the wpp-analysis repo. It reflects the LCP time subtracting the TTFB.
+      The LCP-TTFB metric comes from the benchmark-web-vitals command in the <a href="https://github.com/GoogleChromeLabs/wpp-research">GoogleChromeLabs/wpp-analysis</a> repo. It reflects the LCP time subtracting the TTFB. The value is the median over 25 iterations using the following command:
     </p>
     
+    <pre><code>npm run research -- benchmark-web-vitals -n 25 -f urls.txt -o csv -m LCP-TTFB</code></pre>
+    
     <hr>
-    <address><a href="https://weston.ruter.net/">@westonruter</a></address>
+    <footer>
+      <address><a href="https://weston.ruter.net/">@westonruter</a></address>
+      <time>2024-06-03</time>
+    </footer>
   </body>
 </html>
