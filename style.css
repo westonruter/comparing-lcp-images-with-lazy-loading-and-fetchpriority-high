@@ -23,3 +23,20 @@ video {
   height: auto;
   max-width: 100%;
 }
+
+@media (orientation: portrait) {
+  .emoji-kitchen-images {
+    display: flex;
+    width: 100%;
+  }
+  .emoji-kitchen-images img {
+    flex: 1;
+    min-width: 0;
+  }
+}
+@media (orientation: landscape) {
+  .emoji-kitchen-images img {
+    max-width: 50px;
+    max-height: 50px;
+  }
+}
