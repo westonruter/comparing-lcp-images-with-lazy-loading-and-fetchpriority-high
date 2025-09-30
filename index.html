@@ -20,7 +20,7 @@
   <body>
     <h1>Comparing LCP images with lazy-loading and fetchpriority=high</h1>
 
-    <p>Compare these:</p>
+    <p>Compare the median TTFB-LCP for these test cases:</p>
 
     <table>
       <thead>
@@ -32,13 +32,13 @@
       <tbody>
         <tr>
           <td><a href="plain-lcp-image.html">Plain LCP image</a></td>
-          <td>139.9 ms</td>
+          <td>322.75 ms</td>
         </tr>
         <tr>
           <td>
             <a href="lazy-loaded-lcp-image.html">Lazy-loaded LCP image</a>
           </td>
-          <td>159.4 ms</td>
+          <td>320.45 ms</td>
         </tr>
         <tr>
           <td>
@@ -47,7 +47,7 @@
               >Lazy-loaded LCP image with fetchpriority=high attribute</a
             >
           </td>
-          <td>150.4 ms</td>
+          <td>319.95 ms</td>
         </tr>
         <tr>
           <td>
@@ -55,7 +55,7 @@
               >LCP image with fetchpriority=high attribute</a
             >
           </td>
-          <td>124.5 ms</td>
+          <td>291.20 ms</td>
         </tr>
         <tr>
           <td>
@@ -63,7 +63,7 @@
               >LCP image with fetchpriority=high preload link</a
             >
           </td>
-          <td>126.5 ms</td>
+          <td>293.60 ms</td>
         </tr>
         <tr>
           <td>
@@ -72,7 +72,7 @@
               >Lazy-loaded LCP image with fetchpriority=high preload link</a
             >
           </td>
-          <td>129.0 ms</td>
+          <td>294.05 ms</td>
         </tr>
       </tbody>
     </table>
@@ -94,15 +94,16 @@
         >GoogleChromeLabs/wpp-analysis</a
       >
       repo. It reflects the LCP time subtracting the TTFB. The value is the
-      median over 25 requests using the following command:
+      median over 100 requests with broadband network emulation using the following command:
     </p>
 
-    <pre><code>npm run research -- benchmark-web-vitals --number=25 --file=urls.txt --output csv --metrics=LCP-TTFB</code></pre>
+    <pre><code>npm run research -- benchmark-web-vitals --number=100 --network-conditions=broadband --file=urls.txt --output csv --metrics=LCP-TTFB</code></pre>
 
     <hr />
     <footer>
       <address><a href="https://weston.ruter.net/">@westonruter</a></address>
-      <time>2024-06-03</time>
+      <time>2024-06-03</time><br>
+      <time>2025-09-30</time> (Updated)
     </footer>
   </body>
 </html>
