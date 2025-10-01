@@ -32,13 +32,13 @@
       <tbody>
         <tr>
           <td><a href="https://westonruter.github.io/comparing-lcp-images-with-lazy-loading-and-fetchpriority-high/plain-lcp-image.html">Plain LCP image</a></td>
-          <td>327.5 ms</td>
+          <td>323.4 ms</td>
         </tr>
         <tr>
           <td>
             <a href="https://westonruter.github.io/comparing-lcp-images-with-lazy-loading-and-fetchpriority-high/lazy-loaded-lcp-image.html">Lazy-loaded LCP image</a>
           </td>
-          <td>329.7 ms</td>
+          <td>317.6 ms</td>
         </tr>
         <tr>
           <td>
@@ -47,7 +47,7 @@
               >Lazy-loaded LCP image with fetchpriority=high attribute</a
             >
           </td>
-          <td>331.1 ms</td>
+          <td>318.7 ms</td>
         </tr>
         <tr>
           <td>
@@ -55,7 +55,7 @@
               >LCP image with fetchpriority=high attribute</a
             >
           </td>
-          <td>293.0 ms</td>
+          <td>288.3 ms</td>
         </tr>
         <tr>
           <td>
@@ -63,7 +63,7 @@
               >LCP image with fetchpriority=high preload link</a
             >
           </td>
-          <td>295.4 ms</td>
+          <td>289.0 ms</td>
         </tr>
         <tr>
           <td>
@@ -72,7 +72,7 @@
               >Lazy-loaded LCP image with fetchpriority=high preload link</a
             >
           </td>
-          <td>293.8 ms</td>
+          <td>288.1 ms</td>
         </tr>
       </tbody>
     </table>
@@ -97,7 +97,7 @@
       median over 25 requests with broadband network emulation using the following command:
     </p>
 
-    <pre><code>npm run research -- benchmark-web-vitals --number=25 --network-conditions=broadband --file=urls.txt --output=csv --metrics=LCP-TTFB</code></pre>
+    <pre><code>npm run research -- benchmark-web-vitals --number=100 --network-conditions=broadband --file=urls.txt --output=csv --metrics=LCP-TTFB</code></pre>
 
     <hr />
     <footer>
