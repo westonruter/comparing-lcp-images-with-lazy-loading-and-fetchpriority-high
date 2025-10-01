@@ -26,19 +26,22 @@
       <thead>
         <tr>
           <th>Test Case</th>
-          <th>LCP-TTFB</th>
+          <th>Broadband</th>
+          <th>Fast 4G</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td><a href="https://westonruter.github.io/comparing-lcp-images-with-lazy-loading-and-fetchpriority-high/plain-lcp-image.html">Plain LCP image</a></td>
           <td>323.4 ms</td>
+          <td>742.3 ms</td>
         </tr>
         <tr>
           <td>
             <a href="https://westonruter.github.io/comparing-lcp-images-with-lazy-loading-and-fetchpriority-high/lazy-loaded-lcp-image.html">Lazy-loaded LCP image</a>
           </td>
           <td>317.6 ms</td>
+          <td>741.3 ms</td>
         </tr>
         <tr>
           <td>
@@ -48,6 +51,7 @@
             >
           </td>
           <td>318.7 ms</td>
+          <td>742.1 ms</td>
         </tr>
         <tr>
           <td>
@@ -56,6 +60,7 @@
             >
           </td>
           <td>288.3 ms</td>
+          <td>542.7 ms</td>
         </tr>
         <tr>
           <td>
@@ -64,6 +69,7 @@
             >
           </td>
           <td>289.0 ms</td>
+          <td>545.1 ms</td>
         </tr>
         <tr>
           <td>
@@ -73,6 +79,7 @@
             >
           </td>
           <td>288.1 ms</td>
+          <td>542.7 ms</td>
         </tr>
       </tbody>
     </table>
@@ -94,10 +101,14 @@
         >GoogleChromeLabs/wpp-analysis</a
       >
       repo. It reflects the LCP time subtracting the TTFB. The value is the
-      median over 25 requests with broadband network emulation using the following command:
+      median over 100 requests with broadband network emulation using the following command:
     </p>
 
     <pre><code>npm run research -- benchmark-web-vitals --number=100 --network-conditions=broadband --file=urls.txt --output=csv --metrics=LCP-TTFB</code></pre>
+
+    And 100 requests with Fast 45 Network Emulation:
+
+    <pre><code>npm run research -- benchmark-web-vitals --number=100 --network-conditions="Fast 4G" --file=urls.txt --output=csv --metrics=LCP-TTFB</code></pre>
 
     <hr />
     <footer>
