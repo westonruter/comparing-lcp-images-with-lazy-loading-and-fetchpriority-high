@@ -36,7 +36,7 @@ video {
 }
 @media (orientation: landscape) {
   .emoji-kitchen-images img {
-    max-width: 50px;
-    max-height: 50px;
+    max-width: 101px;
+    max-height: 101px;
   }
 }
